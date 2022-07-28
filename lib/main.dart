@@ -2,18 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_lessons/second_file.dart';
 
 void main() {
-  // registred(name:"Бомжатник" , speed: 90);//(4.1) && (4.2)
-  // Car car = registred2(name:"Бомжатник2" , speed: 60);
-  // car.ToPrint(); // (4.2)
-  // List<Car> array = registred3(name2:"Едет, но не туда" , speed2:-10 , name3:"Норм тачка" , speed3 : 100);//(4.3)
-  // for(int i =0 ;i<array.length;i++){
-  //   array[i].ToPrint();
-  // }
-
-  //Каскадная запись , можно вообще не объявлять переменную , если нам это не нужно
-  Car(speed: 12, name: "Norm")// Car t = Car()
-    ..ToPrint();
-
+  registred(name:"Бомжатник" , speed: 90);//(4.1) && (4.2)
+  Car car = registred2(name:"Бомжатник2" , speed: 60);
+  car.ToPrint(); // (4.2)
+  List<Car> array = registred3(name2:"Едет, но не туда" , speed2:-10 , name3:"Норм тачка" , speed3 : 100);//(4.3)
+  for(int i =0 ;i<array.length;i++){
+    array[i].ToPrint();
+  }
   // runApp(const MyApp());
 }
 

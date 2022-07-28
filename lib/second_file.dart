@@ -26,14 +26,9 @@ List<Car> registred3({String ? name1 , int ? speed1,String ? name2 , int ? speed
 
 class Car{
   int speed = 0;
-  String name = "PPP";
+  String name = "None";
   void ToPrint() {
     print("Name:${name}");
     print("Speed:${speed}");
   }
-  Car({this.speed = 0 , this.name = ""});
-  Car.bomj_only({this.speed = 0, this.name = "Бомжатник"}){
-    print("Создалась карета для бомжар");
-  }
 }
-
