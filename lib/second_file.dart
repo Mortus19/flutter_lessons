@@ -31,4 +31,8 @@ class Car{
     print("Name:${name}");
     print("Speed:${speed}");
   }
+  Car({this.speed = 0 , this.name = ""});
+  Car.bomj_only({this.speed = 0, this.name = "Бомжатник"}){
+    print("Создалась карета для бомжар");
+  }
 }
