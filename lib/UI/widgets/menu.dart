@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../pages/first_screen.dart';
-import '../pages/forsth_screen.dart';
-import '../pages/second_screen.dart';
-import '../pages/third_screen.dart';
+import 'my_scaffold.dart';
 
 Widget buildMenu(BuildContext context, {width = 200}) {
   return Container(
@@ -19,7 +16,7 @@ Widget buildMenu(BuildContext context, {width = 200}) {
           onTap: () {
             Navigator.of(context).pushReplacement(
                 MaterialPageRoute(builder: (BuildContext context) {
-              return FirstScreen();
+              return pages[0];
             }));
           },
         ),
@@ -28,7 +25,7 @@ Widget buildMenu(BuildContext context, {width = 200}) {
           onTap: () {
             Navigator.of(context).pushReplacement(
                 MaterialPageRoute(builder: (BuildContext context) {
-              return SecondPage();
+              return pages[1];
             }));
           },
         ),
@@ -37,7 +34,7 @@ Widget buildMenu(BuildContext context, {width = 200}) {
           onTap: () {
             Navigator.of(context).pushReplacement(
                 MaterialPageRoute(builder: (BuildContext context) {
-              return ThirdPage();
+              return pages[2];
             }));
           },
         ),
@@ -46,7 +43,7 @@ Widget buildMenu(BuildContext context, {width = 200}) {
           onTap: () {
             Navigator.of(context).pushReplacement(
                 MaterialPageRoute(builder: (BuildContext context) {
-              return FourthPage();
+              return pages[3];
             }));
           },
         ),

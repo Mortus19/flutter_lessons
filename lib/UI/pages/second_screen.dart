@@ -9,6 +9,7 @@ class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MyScaffold(
+      current_index: 1,
       title: title,
       body: buildBody(context),
     );

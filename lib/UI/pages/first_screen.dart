@@ -1,4 +1,3 @@
-import 'dart:html';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_lessons/UI/widgets/news.dart';
@@ -18,6 +17,7 @@ class FirstScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MyScaffold(
+      current_index: 0,
       title: title,
       body: buildBody(context),
     );

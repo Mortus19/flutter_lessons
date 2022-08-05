@@ -9,6 +9,7 @@ class ThirdPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MyScaffold(
+      current_index: 2,
       title: title,
       body: buildBody(context),
     );
