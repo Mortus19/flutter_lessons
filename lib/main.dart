@@ -1,17 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_lessons/second_file.dart';
+import 'package:flutter_lessons/UI/pages/main_page.dart';
 
 void main() {
-  registred(name:"Бомжатник" , speed: 90);//(4.1) && (4.2)
-  Car car = registred2(name:"Бомжатник2" , speed: 60);
-  car.ToPrint(); // (4.2)
-  List<Car> array = registred3(name2:"Едет, но не туда" , speed2:-10 , name3:"Норм тачка" , speed3 : 100);//(4.3)
-  for(int i =0 ;i<array.length;i++){
-    array[i].ToPrint();
-  }
-  //Каскадная запись , можно вообще не объявлять переменную , если нам это не нужно
-  Car.bomj_only(speed: 12, name: "Norm")// Car t = Car()
-    ..ToPrint();
   runApp(const MyApp());
 }
 
@@ -22,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,//убирает кнопку debug справа сверху
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -35,7 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: ThreeScreen()
+      home: MainPage()
       // home: const MyHomePage(title: 'Первый учебный'),
     );
   }
