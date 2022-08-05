@@ -1,59 +1,56 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_lessons/UI/pages/dogs_page.dart';
 
-import '../pages/main_page.dart';
-import '../pages/cats_page.dart';
-import '../pages/moose_page.dart';
+import '../pages/first_screen.dart';
+import '../pages/forsth_screen.dart';
+import '../pages/second_screen.dart';
+import '../pages/third_screen.dart';
 
-Widget get_menu(BuildContext context) {
-  double w = MediaQuery.of(context).size.width;
-  double h = MediaQuery.of(context).size.height;
+Widget buildMenu(BuildContext context, {width = 200}) {
   return Container(
-      width: w * 0.3,
-      color: Colors.amber,
-      child: Column(
-        children: [
-          ListTile(
-            title: Text("Главная", textAlign: TextAlign.center),
-            onTap: () {
-              Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (BuildContext context) {
-                return MainPage();
-              }));
-            },
-            contentPadding: EdgeInsets.all(20),
-          ),
-          ListTile(
-            title: Text("Идем в Псарню", textAlign: TextAlign.center),
-            onTap: () {
-              Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (BuildContext context) {
-                return DogsPage();
-              }));
-            },
-            contentPadding: EdgeInsets.all(20),
-          ),
-          ListTile(
-            title: Text("Идем в Котарню", textAlign: TextAlign.center),
-            onTap: () {
-
-              Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (BuildContext context) {
-                return CatsPage();
-              }));
-            },
-            contentPadding: EdgeInsets.all(20),
-          ),
-          ListTile(
-            title: Text("Идем в Лосярню", textAlign: TextAlign.center),
-            onTap: () {
-              Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (BuildContext context) {
-                return MoosePage();
-              }));
-            },
-            contentPadding: EdgeInsets.all(20),
-          ),
-        ],
-      ));
+    width: width,
+    color: Colors.redAccent,
+    child: Column(
+      children: [
+        SizedBox(
+          height: 70,
+        ),
+        ListTile(
+          title: Text("Страница1"),
+          onTap: () {
+            Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (BuildContext context) {
+              return FirstScreen();
+            }));
+          },
+        ),
+        ListTile(
+          title: Text("Страница2"),
+          onTap: () {
+            Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (BuildContext context) {
+              return SecondPage();
+            }));
+          },
+        ),
+        ListTile(
+          title: Text("Страница3"),
+          onTap: () {
+            Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (BuildContext context) {
+              return ThirdPage();
+            }));
+          },
+        ),
+        ListTile(
+          title: Text("Страница4"),
+          onTap: () {
+            Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (BuildContext context) {
+              return FourthPage();
+            }));
+          },
+        ),
+      ],
+    ),
+  );
 }
